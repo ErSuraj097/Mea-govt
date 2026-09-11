@@ -35,7 +35,7 @@ import {
   Globe
 } from 'lucide-react';
 
-export interface CourseExamModule {
+interface CourseExamModule {
   id: string;
   titleHindi: string;
   titleEng: string;

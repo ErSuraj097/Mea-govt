@@ -44,7 +44,7 @@ import { User } from '@/lib/mockData';
 // ==========================================
 // UNIVERSAL DUBBING LANGUAGES (19+ LANGUAGES)
 // ==========================================
-export interface DubbingLanguage {
+interface DubbingLanguage {
   key: string;
   nameEng: string;
   nameNative: string;
@@ -52,7 +52,7 @@ export interface DubbingLanguage {
   ttsCode: string;
 }
 
-export const ALL_DUBBING_LANGUAGES: DubbingLanguage[] = [
+const ALL_DUBBING_LANGUAGES: DubbingLanguage[] = [
   { key: 'en', nameEng: 'English', nameNative: 'English', flag: '🇬🇧', ttsCode: 'en-US' },
   { key: 'hi', nameEng: 'Hindi', nameNative: 'हिंदी', flag: '🇮🇳', ttsCode: 'hi-IN' },
   { key: 'fa', nameEng: 'Persian (Farsi)', nameNative: 'فارسی', flag: '🇮🇷', ttsCode: 'fa-IR' },
@@ -74,7 +74,7 @@ export const ALL_DUBBING_LANGUAGES: DubbingLanguage[] = [
   { key: 'sa', nameEng: 'Sanskrit', nameNative: 'संस्कृतम्', flag: '🇮🇳', ttsCode: 'hi-IN' }
 ];
 
-export function getDubbedSpeechData(langKey: string, courseTitle: string, chapterTitle: string) {
+function getDubbedSpeechData(langKey: string, courseTitle: string, chapterTitle: string) {
   const map: Record<string, { speech: string; translit: string; meaning: string }> = {
     hi: {
       speech: `नमस्ते! इस विशेष वीडियो पाठ में आपका स्वागत है। आज हम ${chapterTitle || 'भारतीय भाषा एवं लिपि'} का गहन अभ्यास करेंगे।`,
@@ -178,7 +178,7 @@ export function getDubbedSpeechData(langKey: string, courseTitle: string, chapte
 // ---------------------------------------------------------------------------
 // 1. DATA DEFINITIONS: 22 SCHEDULED INDIAN LANGUAGES
 // ---------------------------------------------------------------------------
-export interface ScheduledIndianLanguage {
+interface ScheduledIndianLanguage {
   code: string;
   nameEng: string;
   nameNative: string;
@@ -203,7 +203,7 @@ export interface ScheduledIndianLanguage {
   };
 }
 
-export const SCHEDULED_INDIAN_LANGUAGES_22: ScheduledIndianLanguage[] = [
+const SCHEDULED_INDIAN_LANGUAGES_22: ScheduledIndianLanguage[] = [
   {
     code: 'hi',
     nameEng: 'Hindi',
@@ -647,14 +647,14 @@ export const SCHEDULED_INDIAN_LANGUAGES_22: ScheduledIndianLanguage[] = [
 ];
 
 // Global Source Languages for International Learners
-export interface GlobalSourceLanguage {
+interface GlobalSourceLanguage {
   code: string;
   nameEng: string;
   nameNative: string;
   flag: string;
 }
 
-export const GLOBAL_SOURCE_LANGUAGES: GlobalSourceLanguage[] = [
+const GLOBAL_SOURCE_LANGUAGES: GlobalSourceLanguage[] = [
   { code: 'en', nameEng: 'English', nameNative: 'English', flag: '🇬🇧' },
   { code: 'es', nameEng: 'Spanish', nameNative: 'Español', flag: '🇪🇸' },
   { code: 'fr', nameEng: 'French', nameNative: 'Français', flag: '🇫🇷' },

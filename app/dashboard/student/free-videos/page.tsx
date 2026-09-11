@@ -32,7 +32,7 @@ import {
   Radio
 } from 'lucide-react';
 
-export interface DubbingLanguage {
+interface DubbingLanguage {
   key: string;
   nameEng: string;
   nameNative: string;
@@ -40,7 +40,7 @@ export interface DubbingLanguage {
   ttsCode: string;
 }
 
-export const ALL_DUBBING_LANGUAGES: DubbingLanguage[] = [
+const ALL_DUBBING_LANGUAGES: DubbingLanguage[] = [
   { key: 'hi', nameEng: 'Hindi', nameNative: 'हिंदी', flag: '🇮🇳', ttsCode: 'hi-IN' },
   { key: 'en', nameEng: 'English', nameNative: 'English', flag: '🇬🇧', ttsCode: 'en-US' },
   { key: 'fa', nameEng: 'Persian (Farsi)', nameNative: 'فارسی', flag: '🇮🇷', ttsCode: 'fa-IR' },

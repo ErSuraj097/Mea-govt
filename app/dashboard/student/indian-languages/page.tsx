@@ -84,7 +84,7 @@ const ALL_DUBBING_LANGUAGES: DubbingLanguage[] = [
   { key: 'sa', nameEng: 'Sanskrit', nameNative: 'संस्कृतम्', flag: '🇮🇳', ttsCode: 'hi-IN' }
 ];
 
-export function getDubbedSpeechData(langKey: string, courseTitle: string, chapterTitle: string) {
+function getDubbedSpeechData(langKey: string, courseTitle: string, chapterTitle: string) {
   const map: Record<string, { speech: string; translit: string; meaning: string }> = {
     hi: {
       speech: `नमस्ते! इस विशेष वीडियो पाठ में आपका स्वागत है। आज हम ${chapterTitle || 'भारतीय भाषा एवं व्याकरण'} का गहन अभ्यास करेंगे।`,
@@ -188,7 +188,7 @@ export function getDubbedSpeechData(langKey: string, courseTitle: string, chapte
 // ==========================================
 // 22 SCHEDULED INDIAN LANGUAGES SELECTION
 // ==========================================
-export interface IndianLanguageOption {
+interface IndianLanguageOption {
   code: string;
   nameEng: string;
   nameNative: string;
@@ -200,7 +200,7 @@ export interface IndianLanguageOption {
   ttsCode: string;
 }
 
-export const INDIAN_LANGUAGES_22: IndianLanguageOption[] = [
+const INDIAN_LANGUAGES_22: IndianLanguageOption[] = [
   {
     code: 'hi',
     nameEng: 'Hindi',
@@ -445,7 +445,7 @@ export const INDIAN_LANGUAGES_22: IndianLanguageOption[] = [
   }
 ];
 
-export interface IndianLanguageCourse {
+interface IndianLanguageCourse {
   id: string;
   languageEng: string;
   languageNative: string;
