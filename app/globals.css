@@ -1,0 +1,182 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --mea-navy: #0B3D91;
+  --mea-dark-navy: #082C6C;
+  --mea-deep-navy: #051C45;
+  --mea-saffron: #FF9933;
+  --mea-green: #138808;
+  --mea-link: #0645AD;
+  --mea-text: #212121;
+  --mea-muted: #555555;
+  --mea-bg: #FFFFFF;
+  --mea-light-grey: #F5F5F5;
+  --mea-border: #DCE2E6;
+
+  /* Legacy aliases mapped to MEA design tokens */
+  --bg-main: #F5F5F5;
+  --card-bg: #FFFFFF;
+  --border-color: #DCE2E6;
+  --text-main: #212121;
+  --text-muted: #555555;
+  --primary-blue: #0B3D91;
+  --primary-cyan: #0645AD;
+  --saffron: #FF9933;
+  --shield-red: #A91D22;
+}
+
+body {
+  font-family: 'Noto Sans', 'Noto Sans Devanagari', 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #F5F5F5;
+  color: #212121;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Links default styling for official government portal */
+a.mea-link, .mea-prose a {
+  color: #0645AD;
+  text-decoration: none;
+}
+
+a.mea-link:hover, .mea-prose a:hover {
+  text-decoration: underline;
+}
+
+/* Focus Visible for WCAG 2.1 Level AA accessibility */
+*:focus-visible {
+  outline: 2px solid #0B3D91 !important;
+  outline-offset: 2px !important;
+}
+
+/* GIGW 3.0 High Contrast Accessibility Mode */
+body.gigw-high-contrast {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+
+body.gigw-high-contrast a,
+body.gigw-high-contrast button,
+body.gigw-high-contrast h1,
+body.gigw-high-contrast h2,
+body.gigw-high-contrast h3,
+body.gigw-high-contrast h4,
+body.gigw-high-contrast p,
+body.gigw-high-contrast span,
+body.gigw-high-contrast strong,
+body.gigw-high-contrast li {
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
+}
+
+body.gigw-high-contrast div,
+body.gigw-high-contrast section,
+body.gigw-high-contrast nav,
+body.gigw-high-contrast footer,
+body.gigw-high-contrast aside,
+body.gigw-high-contrast header,
+body.gigw-high-contrast main {
+  background-color: #000000 !important;
+  border-color: #ffff00 !important;
+}
+
+body.gigw-high-contrast img {
+  filter: contrast(150%) grayscale(100%);
+}
+
+/* Government Card Utilities */
+.mea-card {
+  background: #FFFFFF;
+  border: 1px solid #DCE2E6;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.mea-card-hover {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.mea-card-hover:hover {
+  border-color: #0B3D91;
+  box-shadow: 0 4px 12px 0 rgba(11, 61, 145, 0.08);
+}
+
+/* Legacy Card Utility support */
+.clean-card {
+  background: #FFFFFF;
+  border: 1px solid #DCE2E6;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+}
+
+.clean-card-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.clean-card-hover:hover {
+  box-shadow: 0 6px 16px -2px rgba(11, 61, 145, 0.08);
+  border-color: #0B3D91;
+}
+
+/* Sovereign Tricolor Ribbon Utilities */
+.tricolor-ribbon {
+  height: 3px;
+  width: 100%;
+  display: flex;
+}
+.tricolor-ribbon-saffron {
+  width: 33.333%;
+  background-color: #FF9933;
+}
+.tricolor-ribbon-white {
+  width: 33.333%;
+  background-color: #FFFFFF;
+}
+.tricolor-ribbon-green {
+  width: 33.334%;
+  background-color: #138808;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0B3D91;
+}
+
+/* Continuous Seamless Marquee */
+@keyframes marquee-continuous {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-continuous {
+  display: flex;
+  width: max-content;
+  animation: marquee-continuous 30s linear infinite;
+}
+
+.animate-marquee-continuous:hover,
+.animate-marquee-continuous:focus-within {
+  animation-play-state: paused;
+}
