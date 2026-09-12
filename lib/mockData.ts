@@ -928,3 +928,256 @@ export const MOCK_TRANSACTIONS: TransactionRecord[] = [
   { id: 'tx_903', studentName: 'Sophia Mueller', itemTitle: 'Level 5 Literature Package', amount: 2499, gateway: 'Apple IAP', status: 'Success', date: '2026-08-20', invoiceUrl: '#invoice-903' },
   { id: 'tx_904', studentName: 'Kenji Takahashi', itemTitle: 'Kendriya Hindi Sansthan Exam Fee', amount: 1500, gateway: 'Google Play Billing', status: 'Success', date: '2026-08-25', invoiceUrl: '#invoice-904' },
 ];
+
+export interface ResourceHubItem {
+  id: string;
+  titleEng: string;
+  titleNative: string;
+  language: string;
+  level: 'A1' | 'A2' | 'B1' | 'B2';
+  skill: 'listening' | 'speaking' | 'reading' | 'writing';
+  topic: string;
+  resourceType: 'Video' | 'Audio' | 'PDF' | 'Course' | 'Practice';
+  sourceInstitution: string;
+  durationOrPages: string;
+  isFree: boolean;
+  isOpenResource: boolean;
+  url: string;
+}
+
+export const MOCK_RESOURCE_HUB_ITEMS: ResourceHubItem[] = [
+  {
+    id: 'res_1',
+    titleEng: 'Essential Hindi Diplomatic Greetings & Formal Honorifics',
+    titleNative: 'हिंदी औपचारिक शिष्टाचार एवं स्वागतात्मक वाक्य',
+    language: 'Hindi',
+    level: 'A1',
+    skill: 'listening',
+    topic: 'Diplomatic Protocol',
+    resourceType: 'Video',
+    sourceInstitution: 'Sushma Swaraj Institute of Foreign Service (SSIFS)',
+    durationOrPages: '14 Mins',
+    isFree: true,
+    isOpenResource: true,
+    url: '#'
+  },
+  {
+    id: 'res_2',
+    titleEng: 'Devanagari Vowels & Consonants Audio Pronunciation Guide',
+    titleNative: 'देवनागरी स्वर एवं व्यंजन उच्चारण दर्शिका',
+    language: 'Hindi',
+    level: 'A1',
+    skill: 'speaking',
+    topic: 'Phonetics & Script',
+    resourceType: 'Audio',
+    sourceInstitution: 'Central Institute of Indian Languages (CIIL), Mysore',
+    durationOrPages: '25 Mins',
+    isFree: true,
+    isOpenResource: true,
+    url: '#'
+  },
+  {
+    id: 'res_3',
+    titleEng: 'Hindi Business Vocabulary & Trade Negotiation Handbook',
+    titleNative: 'हिंदी व्यापारिक शब्दावली एवं अंतर्राष्ट्रीय वार्ता पुस्तिका',
+    language: 'Hindi',
+    level: 'B1',
+    skill: 'reading',
+    topic: 'International Trade',
+    resourceType: 'PDF',
+    sourceInstitution: 'Kendriya Hindi Sansthan (KHS), Agra',
+    durationOrPages: '42 Pages',
+    isFree: true,
+    isOpenResource: true,
+    url: '#'
+  },
+  {
+    id: 'res_4',
+    titleEng: 'Indian Festivals & Cultural Expressions Dialogue Drills',
+    titleNative: 'भारतीय पर्व एवं सांस्कृतिक संवाद अभ्यास',
+    language: 'Hindi',
+    level: 'A2',
+    skill: 'speaking',
+    topic: 'Cultural Exchange',
+    resourceType: 'Video',
+    sourceInstitution: 'Swami Vivekananda Cultural Centre (SVCC), London',
+    durationOrPages: '18 Mins',
+    isFree: true,
+    isOpenResource: true,
+    url: '#'
+  },
+  {
+    id: 'res_5',
+    titleEng: 'Official Government Correspondence & Note Verbale Syntax',
+    titleNative: 'सरकारी पत्राचार एवं टिप्पणी लेखन अभ्यास',
+    language: 'Hindi',
+    level: 'B2',
+    skill: 'writing',
+    topic: 'Government Governance',
+    resourceType: 'PDF',
+    sourceInstitution: 'Department of Official Language, MHA',
+    durationOrPages: '68 Pages',
+    isFree: true,
+    isOpenResource: true,
+    url: '#'
+  }
+];
+
+export interface LanguageCircle {
+  id: string;
+  title: string;
+  cityCountry: string;
+  flag: string;
+  hostName: string;
+  hostRole: string;
+  date: string;
+  timeLocal: string;
+  timeIST: string;
+  level: string;
+  participants: number;
+  maxParticipants: number;
+}
+
+export const MOCK_LANGUAGE_CIRCLES: LanguageCircle[] = [
+  {
+    id: 'circ_1',
+    title: 'Hindi Conversation & Cultural Protocol Circle',
+    cityCountry: 'London, United Kingdom',
+    flag: '🇬🇧',
+    hostName: 'Dr. Evelyn Reed',
+    hostRole: 'SVCC Academic Coordinator',
+    date: 'Thursday, 18 Sept',
+    timeLocal: '3:00 PM GMT',
+    timeIST: '7:30 PM IST',
+    level: 'A1 - Beginner',
+    participants: 18,
+    maxParticipants: 25
+  },
+  {
+    id: 'circ_2',
+    title: 'Hindi for International Envoys & Diplomats',
+    cityCountry: 'New York, USA',
+    flag: '🇺🇸',
+    hostName: 'Amb. Rajesh Malhotra (Retd.)',
+    hostRole: 'Distinguished Fellow, MEA Academy',
+    date: 'Friday, 19 Sept',
+    timeLocal: '10:00 AM EST',
+    timeIST: '7:30 PM IST',
+    level: 'A2 - Intermediate',
+    participants: 14,
+    maxParticipants: 20
+  },
+  {
+    id: 'circ_3',
+    title: 'Diplomatic & Business Hindi Dialogue Practice',
+    cityCountry: 'Singapore',
+    flag: '🇸🇬',
+    hostName: 'Prof. Mei-Ling Zhang',
+    hostRole: 'NUS South Asian Studies Chair',
+    date: 'Saturday, 20 Sept',
+    timeLocal: '4:00 PM SGT',
+    timeIST: '1:30 PM IST',
+    level: 'B1 - Upper-Beginner',
+    participants: 22,
+    maxParticipants: 30
+  },
+  {
+    id: 'circ_4',
+    title: 'Hindi Poetry & Literary Recitation Circle',
+    cityCountry: 'Tokyo, Japan',
+    flag: '🇯🇵',
+    hostName: 'Kenji Takahashi',
+    hostRole: 'Indology Scholar & Hindi Author',
+    date: 'Sunday, 21 Sept',
+    timeLocal: '6:00 PM JST',
+    timeIST: '2:30 PM IST',
+    level: 'B2 - Advanced',
+    participants: 12,
+    maxParticipants: 15
+  }
+];
+
+export interface CreativeSubmission {
+  id: string;
+  title: string;
+  category: 'Poetry' | 'Essay' | 'Speech' | 'Video' | 'Story';
+  authorName: string;
+  authorCountry: string;
+  authorFlag: string;
+  language: string;
+  cefrLevel: string;
+  likes: number;
+  views: number;
+  previewSnippet: string;
+  publishedDate: string;
+}
+
+export const MOCK_CREATIVE_SUBMISSIONS: CreativeSubmission[] = [
+  {
+    id: 'sub_1',
+    title: 'मेरी भारत यात्रा और हिंदी से प्रेम (My Journey to India)',
+    category: 'Essay',
+    authorName: 'Sophie Bernard',
+    authorCountry: 'France',
+    authorFlag: '🇫🇷',
+    language: 'Hindi',
+    cefrLevel: 'A2',
+    likes: 342,
+    views: 1890,
+    previewSnippet: 'जब मैं पहली बार दिल्ली आई, तो मुझे देवनागरी लिपि के अक्षर किसी सुंदर चित्रकला जैसे लगे...',
+    publishedDate: '2026-09-02'
+  },
+  {
+    id: 'sub_2',
+    title: 'शांति और वसुधैव कुटुम्बकम् (Peace and Global Family)',
+    category: 'Poetry',
+    authorName: 'David H. Miller',
+    authorCountry: 'United States',
+    authorFlag: '🇺🇸',
+    language: 'Hindi',
+    cefrLevel: 'B1',
+    likes: 512,
+    views: 2410,
+    previewSnippet: 'दिशायें मुस्कुराती हैं जब भाषाएं मिलती हैं,\nहृदय के तार बजते हैं जब दो संस्कृतियां खिलती हैं...',
+    publishedDate: '2026-09-05'
+  },
+  {
+    id: 'sub_3',
+    title: 'हिंदी बोलने में मेरा पहला अनुभव (First Experience Speaking Hindi)',
+    category: 'Speech',
+    authorName: 'Yuki Tanaka',
+    authorCountry: 'Japan',
+    authorFlag: '🇯🇵',
+    language: 'Hindi',
+    cefrLevel: 'A1',
+    likes: 289,
+    views: 1205,
+    previewSnippet: 'नमस्ते! मैं टोक्यो से हूँ। जब मैंने अपने भारतीय मित्र से पहली बार हिंदी में बात की...',
+    publishedDate: '2026-09-08'
+  }
+];
+
+export interface MissionCountryMetrics {
+  countryCode: string;
+  countryName: string;
+  flag: string;
+  activeLearners: number;
+  hindiLearners: number;
+  teachersCount: number;
+  institutionsCount: number;
+  circlesCount: number;
+  certificatesIssued: number;
+}
+
+export const MOCK_MISSION_METRICS: MissionCountryMetrics[] = [
+  { countryCode: 'GB', countryName: 'United Kingdom', flag: '🇬🇧', activeLearners: 2480, hindiLearners: 2150, teachersCount: 34, institutionsCount: 12, circlesCount: 18, certificatesIssued: 840 },
+  { countryCode: 'US', countryName: 'United States', flag: '🇺🇸', activeLearners: 5120, hindiLearners: 4600, teachersCount: 68, institutionsCount: 24, circlesCount: 32, certificatesIssued: 1920 },
+  { countryCode: 'AE', countryName: 'United Arab Emirates', flag: '🇦🇪', activeLearners: 3890, hindiLearners: 3400, teachersCount: 45, institutionsCount: 16, circlesCount: 22, certificatesIssued: 1450 },
+  { countryCode: 'JP', countryName: 'Japan', flag: '🇯🇵', activeLearners: 1420, hindiLearners: 1280, teachersCount: 19, institutionsCount: 8, circlesCount: 10, certificatesIssued: 510 },
+  { countryCode: 'AU', countryName: 'Australia', flag: '🇦🇺', activeLearners: 1850, hindiLearners: 1620, teachersCount: 22, institutionsCount: 9, circlesCount: 12, certificatesIssued: 680 },
+  { countryCode: 'SG', countryName: 'Singapore', flag: '🇸🇬', activeLearners: 1980, hindiLearners: 1750, teachersCount: 26, institutionsCount: 10, circlesCount: 14, certificatesIssued: 790 },
+  { countryCode: 'DE', countryName: 'Germany', flag: '🇩🇪', activeLearners: 1640, hindiLearners: 1410, teachersCount: 21, institutionsCount: 7, circlesCount: 11, certificatesIssued: 560 },
+  { countryCode: 'CA', countryName: 'Canada', flag: '🇨🇦', activeLearners: 2950, hindiLearners: 2600, teachersCount: 38, institutionsCount: 15, circlesCount: 19, certificatesIssued: 1100 },
+  { countryCode: 'FR', countryName: 'France', flag: '🇫🇷', activeLearners: 1210, hindiLearners: 1050, teachersCount: 16, institutionsCount: 6, circlesCount: 8, certificatesIssued: 420 },
+];
+

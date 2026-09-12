@@ -10,6 +10,7 @@ export interface LanguageMeta {
   flag: string;
   isScheduleVIII: boolean;
   region: string;
+  availabilityStatus?: 'phase1' | 'coming_soon' | 'future_scope';
 }
 
 export interface LanguagePair {
@@ -63,40 +64,40 @@ export interface GoalTrackLesson {
 
 // 22 Eighth Schedule Official Indian Languages
 export const SCHEDULE_VIII_LANGUAGES: LanguageMeta[] = [
-  { code: 'hi', nameEng: 'Hindi', nameNative: 'हिंदी', script: 'Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'North/Central India' },
-  { code: 'ta', nameEng: 'Tamil', nameNative: 'தமிழ்', script: 'Tamil', flag: '🇮🇳', isScheduleVIII: true, region: 'Tamil Nadu & Puducherry' },
-  { code: 'te', nameEng: 'Telugu', nameNative: 'తెలుగు', script: 'Telugu', flag: '🇮🇳', isScheduleVIII: true, region: 'Andhra Pradesh & Telangana' },
-  { code: 'bn', nameEng: 'Bengali', nameNative: 'বাংলা', script: 'Bengali', flag: '🇮🇳', isScheduleVIII: true, region: 'West Bengal & Tripura' },
-  { code: 'mr', nameEng: 'Marathi', nameNative: 'मराठी', script: 'Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Maharashtra & Goa' },
-  { code: 'gu', nameEng: 'Gujarati', nameNative: 'ગુજરાતી', script: 'Gujarati', flag: '🇮🇳', isScheduleVIII: true, region: 'Gujarat' },
-  { code: 'kn', nameEng: 'Kannada', nameNative: 'ಕನ್ನಡ', script: 'Kannada', flag: '🇮🇳', isScheduleVIII: true, region: 'Karnataka' },
-  { code: 'ml', nameEng: 'Malayalam', nameNative: 'മലയാളം', script: 'Malayalam', flag: '🇮🇳', isScheduleVIII: true, region: 'Kerala & Lakshadweep' },
-  { code: 'pa', nameEng: 'Punjabi', nameNative: 'ਪੰਜਾਬੀ', script: 'Gurmukhi', flag: '🇮🇳', isScheduleVIII: true, region: 'Punjab' },
-  { code: 'or', nameEng: 'Odia', nameNative: 'ଓଡ଼ିଆ', script: 'Odia', flag: '🇮🇳', isScheduleVIII: true, region: 'Odisha' },
-  { code: 'as', nameEng: 'Assamese', nameNative: 'অসমীয়া', script: 'Bengali-Assamese', flag: '🇮🇳', isScheduleVIII: true, region: 'Assam' },
-  { code: 'sa', nameEng: 'Sanskrit', nameNative: 'संस्कृतम्', script: 'Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Pan-Indian Classical' },
-  { code: 'ur', nameEng: 'Urdu', nameNative: 'اردو', script: 'Perso-Arabic', flag: '🇮🇳', isScheduleVIII: true, region: 'Pan-Indian' },
-  { code: 'mai', nameEng: 'Maithili', nameNative: 'मैथिली', script: 'Devanagari / Mithilakshar', flag: '🇮🇳', isScheduleVIII: true, region: 'Bihar & Jharkhand' },
-  { code: 'sant', nameEng: 'Santali', nameNative: 'ᱥᱟᱱᱛᱟᱲᱤ', script: 'Ol Chiki', flag: '🇮🇳', isScheduleVIII: true, region: 'Jharkhand, Odisha, WB' },
-  { code: 'ks', nameEng: 'Kashmiri', nameNative: 'کٲشُر / कॉशुर', script: 'Perso-Arabic / Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Jammu & Kashmir' },
-  { code: 'ne', nameEng: 'Nepali', nameNative: 'नेपाली', script: 'Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Sikkim & West Bengal' },
-  { code: 'sd', nameEng: 'Sindhi', nameNative: 'سنڌي / सिन्धी', script: 'Perso-Arabic / Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Pan-Indian' },
-  { code: 'kok', nameEng: 'Konkani', nameNative: 'कोंकणी', script: 'Devanagari / Roman', flag: '🇮🇳', isScheduleVIII: true, region: 'Goa & Coastal Karnataka' },
-  { code: 'doi', nameEng: 'Dogri', nameNative: 'डोगरी', script: 'Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Jammu' },
-  { code: 'mni', nameEng: 'Manipuri (Meitei)', nameNative: 'ꯃꯤꯇꯩꯂꯣꯟ', script: 'Meitei Mayek', flag: '🇮🇳', isScheduleVIII: true, region: 'Manipur' },
-  { code: 'brx', nameEng: 'Bodo', nameNative: 'बड़ो', script: 'Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Assam Bodoland' },
+  { code: 'hi', nameEng: 'Hindi', nameNative: 'हिंदी', script: 'Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'North/Central India', availabilityStatus: 'phase1' },
+  { code: 'ta', nameEng: 'Tamil', nameNative: 'தமிழ்', script: 'Tamil', flag: '🇮🇳', isScheduleVIII: true, region: 'Tamil Nadu & Puducherry', availabilityStatus: 'coming_soon' },
+  { code: 'te', nameEng: 'Telugu', nameNative: 'తెలుగు', script: 'Telugu', flag: '🇮🇳', isScheduleVIII: true, region: 'Andhra Pradesh & Telangana', availabilityStatus: 'coming_soon' },
+  { code: 'bn', nameEng: 'Bengali', nameNative: 'বাংলা', script: 'Bengali', flag: '🇮🇳', isScheduleVIII: true, region: 'West Bengal & Tripura', availabilityStatus: 'coming_soon' },
+  { code: 'mr', nameEng: 'Marathi', nameNative: 'मराठी', script: 'Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Maharashtra & Goa', availabilityStatus: 'coming_soon' },
+  { code: 'gu', nameEng: 'Gujarati', nameNative: 'ગુજરાતી', script: 'Gujarati', flag: '🇮🇳', isScheduleVIII: true, region: 'Gujarat', availabilityStatus: 'coming_soon' },
+  { code: 'kn', nameEng: 'Kannada', nameNative: 'ಕನ್ನಡ', script: 'Kannada', flag: '🇮🇳', isScheduleVIII: true, region: 'Karnataka', availabilityStatus: 'coming_soon' },
+  { code: 'ml', nameEng: 'Malayalam', nameNative: 'മലയാളം', script: 'Malayalam', flag: '🇮🇳', isScheduleVIII: true, region: 'Kerala & Lakshadweep', availabilityStatus: 'coming_soon' },
+  { code: 'pa', nameEng: 'Punjabi', nameNative: 'ਪੰਜਾਬੀ', script: 'Gurmukhi', flag: '🇮🇳', isScheduleVIII: true, region: 'Punjab', availabilityStatus: 'coming_soon' },
+  { code: 'or', nameEng: 'Odia', nameNative: 'ଓଡ଼ିଆ', script: 'Odia', flag: '🇮🇳', isScheduleVIII: true, region: 'Odisha', availabilityStatus: 'coming_soon' },
+  { code: 'as', nameEng: 'Assamese', nameNative: 'অসমীয়া', script: 'Bengali-Assamese', flag: '🇮🇳', isScheduleVIII: true, region: 'Assam', availabilityStatus: 'coming_soon' },
+  { code: 'sa', nameEng: 'Sanskrit', nameNative: 'संस्कृतम्', script: 'Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Pan-Indian Classical', availabilityStatus: 'coming_soon' },
+  { code: 'ur', nameEng: 'Urdu', nameNative: 'اردو', script: 'Perso-Arabic', flag: '🇮🇳', isScheduleVIII: true, region: 'Pan-Indian', availabilityStatus: 'coming_soon' },
+  { code: 'mai', nameEng: 'Maithili', nameNative: 'मैथिली', script: 'Devanagari / Mithilakshar', flag: '🇮🇳', isScheduleVIII: true, region: 'Bihar & Jharkhand', availabilityStatus: 'coming_soon' },
+  { code: 'sant', nameEng: 'Santali', nameNative: 'ᱥᱟᱱᱛᱟᱲᱤ', script: 'Ol Chiki', flag: '🇮🇳', isScheduleVIII: true, region: 'Jharkhand, Odisha, WB', availabilityStatus: 'coming_soon' },
+  { code: 'ks', nameEng: 'Kashmiri', nameNative: 'کٲشُر / कॉशुर', script: 'Perso-Arabic / Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Jammu & Kashmir', availabilityStatus: 'coming_soon' },
+  { code: 'ne', nameEng: 'Nepali', nameNative: 'नेपाली', script: 'Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Sikkim & West Bengal', availabilityStatus: 'coming_soon' },
+  { code: 'sd', nameEng: 'Sindhi', nameNative: 'سنڌي / सिन्धी', script: 'Perso-Arabic / Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Pan-Indian', availabilityStatus: 'coming_soon' },
+  { code: 'kok', nameEng: 'Konkani', nameNative: 'कोंकणी', script: 'Devanagari / Roman', flag: '🇮🇳', isScheduleVIII: true, region: 'Goa & Coastal Karnataka', availabilityStatus: 'coming_soon' },
+  { code: 'doi', nameEng: 'Dogri', nameNative: 'डोगरी', script: 'Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Jammu', availabilityStatus: 'coming_soon' },
+  { code: 'mni', nameEng: 'Manipuri (Meitei)', nameNative: 'ꯃꯤꯇꯩꯂꯣꯟ', script: 'Meitei Mayek', flag: '🇮🇳', isScheduleVIII: true, region: 'Manipur', availabilityStatus: 'coming_soon' },
+  { code: 'brx', nameEng: 'Bodo', nameNative: 'बड़ो', script: 'Devanagari', flag: '🇮🇳', isScheduleVIII: true, region: 'Assam Bodoland', availabilityStatus: 'coming_soon' },
 ];
 
 // Major Foreign Languages for Track B
 export const FOREIGN_LANGUAGES: LanguageMeta[] = [
-  { code: 'fr', nameEng: 'French', nameNative: 'Français', script: 'Latin', flag: '🇫🇷', isScheduleVIII: false, region: 'France, Francophone Africa, Canada' },
-  { code: 'es', nameEng: 'Spanish', nameNative: 'Español', script: 'Latin', flag: '🇪🇸', isScheduleVIII: false, region: 'Spain, Latin America' },
-  { code: 'de', nameEng: 'German', nameNative: 'Deutsch', script: 'Latin', flag: '🇩🇪', isScheduleVIII: false, region: 'Germany, Austria, Switzerland' },
-  { code: 'ja', nameEng: 'Japanese', nameNative: '日本語', script: 'Kanji / Kana', flag: '🇯🇵', isScheduleVIII: false, region: 'Japan' },
-  { code: 'ar', nameEng: 'Arabic', nameNative: 'العربية', script: 'Arabic', flag: '🇸🇦', isScheduleVIII: false, region: 'Middle East & North Africa' },
-  { code: 'ru', nameEng: 'Russian', nameNative: 'Русский', script: 'Cyrillic', flag: '🇷🇺', isScheduleVIII: false, region: 'Russia & CIS' },
-  { code: 'zh', nameEng: 'Mandarin Chinese', nameNative: '普通话 (中文)', script: 'Simplified Chinese', flag: '🇨🇳', isScheduleVIII: false, region: 'East Asia' },
-  { code: 'pt', nameEng: 'Portuguese', nameNative: 'Português', script: 'Latin', flag: '🇵🇹', isScheduleVIII: false, region: 'Brazil, Portugal, Lusophone Africa' },
+  { code: 'fr', nameEng: 'French', nameNative: 'Français', script: 'Latin', flag: '🇫🇷', isScheduleVIII: false, region: 'France, Francophone Africa, Canada', availabilityStatus: 'future_scope' },
+  { code: 'es', nameEng: 'Spanish', nameNative: 'Español', script: 'Latin', flag: '🇪🇸', isScheduleVIII: false, region: 'Spain, Latin America', availabilityStatus: 'future_scope' },
+  { code: 'de', nameEng: 'German', nameNative: 'Deutsch', script: 'Latin', flag: '🇩🇪', isScheduleVIII: false, region: 'Germany, Austria, Switzerland', availabilityStatus: 'future_scope' },
+  { code: 'ja', nameEng: 'Japanese', nameNative: '日本語', script: 'Kanji / Kana', flag: '🇯🇵', isScheduleVIII: false, region: 'Japan', availabilityStatus: 'future_scope' },
+  { code: 'ar', nameEng: 'Arabic', nameNative: 'العربية', script: 'Arabic', flag: '🇸🇦', isScheduleVIII: false, region: 'Middle East & North Africa', availabilityStatus: 'future_scope' },
+  { code: 'ru', nameEng: 'Russian', nameNative: 'Русский', script: 'Cyrillic', flag: '🇷🇺', isScheduleVIII: false, region: 'Russia & CIS', availabilityStatus: 'future_scope' },
+  { code: 'zh', nameEng: 'Mandarin Chinese', nameNative: '普通话 (中文)', script: 'Simplified Chinese', flag: '🇨🇳', isScheduleVIII: false, region: 'East Asia', availabilityStatus: 'future_scope' },
+  { code: 'pt', nameEng: 'Portuguese', nameNative: 'Português', script: 'Latin', flag: '🇵🇹', isScheduleVIII: false, region: 'Brazil, Portugal, Lusophone Africa', availabilityStatus: 'future_scope' },
 ];
 
 // Preconfigured Active Configurable Language Pairs

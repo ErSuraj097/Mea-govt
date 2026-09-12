@@ -37,6 +37,10 @@ import PlacementDiagnosticPage from './diagnostic/page';
 import CreativeShowcasePage from './showcase/page';
 import LanguageCirclesPage from './language-circles/page';
 import StudentTicketsPage from './tickets/page';
+import AILearningNavigatorPage from './ai-navigator/page';
+import AIVoiceTutorPage from './ai-tutor/page';
+import ResourceHubPage from '@/app/resources/page';
+import KnowledgeReturnPage from '@/app/community/knowledge-return/page';
 
 export default function StudentDashboard() {
   const searchParams = useSearchParams();
@@ -48,6 +52,10 @@ export default function StudentDashboard() {
   }, []);
 
   // Dedicated Student Tab Router
+  if (activeTab === 'ai-navigator' || activeTab === 'navigator') return <AILearningNavigatorPage />;
+  if (activeTab === 'ai-tutor' || activeTab === 'tutor' || activeTab === 'voice-tutor') return <AIVoiceTutorPage />;
+  if (activeTab === 'resources' || activeTab === 'resource-hub') return <ResourceHubPage />;
+  if (activeTab === 'knowledge-return') return <KnowledgeReturnPage />;
   if (activeTab === 'tickets' || activeTab === 'raise-ticket' || activeTab === 'support' || activeTab === 'help-tickets') return <StudentTicketsPage />;
   if (activeTab === 'ai-calls' || activeTab === 'calls' || activeTab === 'schedule' || activeTab === 'call') return <StudentAICallsPage />;
   if (activeTab === 'Sambhasini-ai' || activeTab === 'Sambhasini-tools' || activeTab === 'Sambhasini') return <StudentSambhasiniAIPage />;

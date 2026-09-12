@@ -134,23 +134,54 @@ export default function DashboardSidebar() {
 
   const roleSidebarData: Record<User['role'], { title: string; subtitle: string; groups: SidebarGroup[] }> = {
     student: {
-      title: 'Student Console',
-      subtitle: 'Learner • Class 10/12 Stream',
+      title: 'Global Scholar Console',
+      subtitle: 'Learner • Hindi Phase 1 Stream',
       groups: [
         {
-          groupTitle: 'MAIN WORKSPACE',
+          groupTitle: '1. LEARN & AI PATHWAYS',
           items: [
-            { tabId: 'overview', label: 'Dashboard Overview', icon: LayoutDashboard },
+            { tabId: 'overview', label: 'My Language Journey', icon: LayoutDashboard },
+            { tabId: 'diagnostic', label: 'AI Placement Diagnostic', icon: FileCheck2, badge: 'Hero' },
+            { tabId: 'ai-navigator', label: 'AI Learning Navigator', icon: Compass, badge: '30-Min' },
+            { tabId: 'ai-tutor', label: 'AI Voice Tutor', icon: Mic, badge: 'Live Voice' },
             {
               tabId: 'courses-dropdown',
-              label: 'Courses & Masterclasses',
+              label: 'Languages & Masterclasses',
               icon: BookOpen,
               subItems: [
-                { tabId: 'foreign-languages', label: ' Indian ➔ Foreign Languages', badge: '15' },
-                { tabId: 'foreign-to-indian', label: ' Foreign ➔ Indian Languages', badge: '22' },
-                { tabId: 'indian-languages', label: ' 22 Indian Languages (Bhasha)', badge: '22' },
+                { tabId: 'indian-languages', label: 'Hindi (Phase 1 Available)', badge: 'Phase 1' },
+                { tabId: 'foreign-to-indian', label: '21 Indian Languages (Packs)', badge: 'Soon' },
+                { tabId: 'foreign-languages', label: 'Indian ➔ Foreign Track', badge: 'Future' },
               ],
             },
+            { tabId: 'levels', label: 'CEFR Pathway (A1-C2)', icon: GraduationCap, badge: 'A1-C2' },
+            { tabId: 'exam', label: 'Assessments & Exams', icon: HelpCircle, badge: '3' },
+          ],
+        },
+        {
+          groupTitle: '2. CLASSES & PRACTICE',
+          items: [
+            {
+              tabId: 'classes-dropdown',
+              label: 'Classes & Training',
+              icon: Video,
+              badge: '2',
+              subItems: [
+                { tabId: 'classes', label: 'Live Classes (Online)' },
+                { tabId: 'physical', label: 'Physical Classes (Offline)' },
+              ],
+            },
+            { tabId: 'ai-calls', label: 'JETHAT AI Practice Call', icon: PhoneCall, badge: 'Live' },
+            { tabId: 'chatbot', label: 'AI Teacher Hub', icon: Bot, badge: 'Online' },
+            { tabId: 'speaking-test', label: 'AI Speaking Test', icon: Mic, badge: 'Voice' },
+            { tabId: 'writing-test', label: 'AI Writing Test', icon: FileEdit, badge: 'Grammar' },
+            { tabId: 'listening-test', label: 'AI Listening Test', icon: Headphones, badge: 'Audio' },
+          ],
+        },
+        {
+          groupTitle: '3. RESOURCES & DISCOVERY',
+          items: [
+            { tabId: 'resources', label: 'Resource Hub', icon: Globe, badge: 'Open' },
             {
               tabId: 'free-dropdown',
               label: 'Free Resources',
@@ -162,59 +193,29 @@ export default function DashboardSidebar() {
                 { tabId: 'guided-learning', label: 'Guided Study', badge: 'PDF' },
               ],
             },
-            { tabId: 'levels', label: 'Levels Pathway', icon: BookOpen, badge: 'L1-L7' },
-            { tabId: 'exam', label: 'Assessments & Exams', icon: HelpCircle, badge: '3' },
-            {
-              tabId: 'classes-dropdown',
-              label: 'Classes & Training',
-              icon: Video,
-              badge: '2',
-              subItems: [
-                { tabId: 'classes', label: 'Live Classes (Online)' },
-                { tabId: 'physical', label: 'Physical Classes (Offline)' },
-              ],
-            },
-            { tabId: 'competitions', label: 'Competitions', icon: Trophy },
-            { tabId: 'leaderboard', label: 'Leaderboard', icon: BarChart3 },
-            { tabId: 'institutes', label: 'Institutes', icon: Building2 },
-            { tabId: 'library', label: 'Library', icon: BookOpen },
+            { tabId: 'library', label: 'Academic Library', icon: BookOpen },
+            { tabId: 'institutes', label: 'Partner Institutes', icon: Building2 },
           ],
         },
         {
-          groupTitle: 'MEA GLOBAL & COMMUNITY',
+          groupTitle: '4. CONNECT & PROMOTE',
           items: [
-            { tabId: 'diagnostic', label: 'AI Placement Diagnostic', icon: FileCheck2, badge: 'AI/ML' },
-            // { tabId: 'showcase', label: 'Creative Showcase Gallery', icon: Sparkles, badge: 'Gallery' },
-            { tabId: 'language-circles', label: 'Live Language Circles', icon: Users2, badge: 'Live' },
+            { tabId: 'language-circles', label: 'Global Language Circles', icon: Users2, badge: 'Live' },
+            { tabId: 'showcase', label: 'Global Creative Showcase', icon: Sparkles, badge: 'Gallery' },
+            { tabId: 'knowledge-return', label: 'Knowledge Return Network', icon: Globe, badge: 'India' },
+            { tabId: 'competitions', label: 'Competitions & XP', icon: Trophy },
+            { tabId: 'leaderboard', label: 'Global Leaderboard', icon: BarChart3 },
           ],
         },
-
-
-
         {
-          groupTitle: 'AI LEARNING TOOLS',
-          items: [
-            { tabId: 'ai-calls', label: 'JETHAT AI Practice Call', icon: PhoneCall, badge: 'Live' },
-            { tabId: 'chatbot', label: 'AI Teacher Hub', icon: Bot, badge: 'Online' },
-            { tabId: 'speaking-test', label: 'AI Speaking Test', icon: Mic, badge: 'Voice' },
-            { tabId: 'writing-test', label: 'AI Writing Test', icon: FileEdit, badge: 'Grammar' },
-            { tabId: 'listening-test', label: 'AI Listening Test', icon: Headphones, badge: 'Audio' },
-            // { tabId: 'avatar', label: 'Digital Avatars', icon: Sparkles, badge: '3D' },
-            // { tabId: 'certificates', label: 'My Certificates', icon: Shield },
-            // { tabId: 'account-details', label: 'Account & Payments', icon: DollarSign, badge: 'Paid' },
-          ],
-        },
-
-        {
-          groupTitle: 'PROFILE & SUPPORT',
+          groupTitle: '5. PROFILE & SUPPORT',
           items: [
             { tabId: 'avatar', label: 'Digital Avatars', icon: Sparkles, badge: '3D' },
-            { tabId: 'certificates', label: 'My Certificates', icon: Shield },
+            { tabId: 'certificates', label: 'Accredited Diplomas', icon: Shield, badge: 'CEFR' },
             { tabId: 'account-details', label: 'Account & Payments', icon: DollarSign, badge: 'Paid' },
             { tabId: 'tickets', label: 'Support & Help Desk', icon: HelpCircle, badge: '24/7' },
           ],
         },
-
       ],
     },
 

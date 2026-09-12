@@ -90,6 +90,16 @@ const WORKSPACE_ROLES: RoleWorkspaceItem[] = [
     iconColor: 'text-teal-700 group-hover:text-white'
   },
   {
+    id: 'mission',
+    title: 'Mission Outreach',
+    hindiTitle: 'दूतावास एवं मिशन',
+    tag: 'MEA Embassy Governance',
+    href: ROUTES.DASHBOARD.MISSION,
+    icon: Building2,
+    iconBg: 'bg-[#EEF3F8] group-hover:bg-[#0B3D91]',
+    iconColor: 'text-[#0B3D91] group-hover:text-white'
+  },
+  {
     id: 'admin',
     title: 'Super Admin',
     hindiTitle: 'मुख्य प्रशासक',

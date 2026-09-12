@@ -28,47 +28,45 @@ interface HeroSlide {
 const HERO_SLIDES: HeroSlide[] = [
   {
     id: 'slide-1',
-    quote: 'A Nationalist to\nthe Core',
-    hindiQuote: '“राष्ट्रवादी अंतःकरण से”',
-    subtitle: 'Ministry of External Affairs • Sovereign Indian Language Learning & Global Propagation Portal',
+    quote: 'Learn Indian Languages.\nConnect with India.',
+    hindiQuote: '“भारतीय भाषाएँ सीखें। भारत से जुड़ें।”',
+    subtitle: 'A sovereign, AI-powered global platform for learning, practising, assessing and promoting Indian languages worldwide.',
     imageDesktop: '/hero/slide-1.jpg',
     imageMobile: '/hero/slide-1.jpg',
-    alt: 'Ministry of External Affairs Indian Language Learning Portal',
+    alt: 'MEA Global Indian Language Learning & Propagation Platform',
     alignment: 'right',
-    badge: 'GOVERNMENT OF INDIA • विदेश मंत्रालय',
-    ctaText: 'Sign In to LMS Console',
-    ctaHref: '/login'
+    badge: 'MINISTRY OF EXTERNAL AFFAIRS • PHASE 1 HINDI AVAILABLE NOW',
+    ctaText: 'Start Learning Hindi (Phase 1) →',
+    ctaHref: '/dashboard/student/diagnostic'
   },
-
   {
     id: 'slide-2',
-    quote: 'Connecting  \n the Global\nIndian Diaspora',
-    hindiQuote: '“वैश्विक भारतीय समुदाय से जीवंत जुड़ाव”',
-    subtitle: 'Empowering 32 Million Overseas Indians & Global Scholars with Accredited Language Diplomas',
+    quote: 'Connecting Overseas\nScholars & Diaspora',
+    hindiQuote: '“वैश्विक भारतीय समुदाय एवं अध्येताओं का सेतु”',
+    subtitle: 'Empowering global learners, envoys, and diaspora NRI youth with AI-assisted learning and CEFR accredited certifications.',
     imageDesktop: '/hero/slide-3.jpg',
     imageMobile: '/hero/slide-3.jpg',
     alt: 'Global Indian Diaspora and Foreign Envoys Cohort',
     alignment: 'left',
-    badge: 'DIASPORA & ICCR FELLOWSHIPS',
-    ctaText: 'View Global Missions',
-    ctaHref: '/compliance'
+    badge: 'GLOBAL OUTREACH & ICCR FELLOWSHIPS',
+    ctaText: 'Explore Resource Hub',
+    ctaHref: '/resources'
   },
-    {
+  {
     id: 'slide-3',
-    quote: 'Lover of\nIndian Art & Culture',
-    hindiQuote: '“भारतीय कला एवं संस्कृति प्रेमी”',
-    subtitle: 'Preserving and Propagating 22 Eighth Schedule Indian Languages & Classical Devanagari Heritage',
+    quote: '22 Official Languages\nModular Architecture',
+    hindiQuote: '“22 संविधान स्वीकृत भाषाएँ • मॉड्यूलर विस्तार”',
+    subtitle: 'Hindi Available Now (Phase 1). 21 Eighth Schedule languages expanding modularly via upcoming language packs.',
     imageDesktop: '/hero/slide-2.jpg',
     imageMobile: '/hero/slide-2.jpg',
     alt: 'Indian Language & Cultural Heritage',
     alignment: 'right',
-    badge: 'CULTURAL DIPLOMACY & LINGUISTICS',
-    ctaText: 'Explore Curriculum Tracks',
-    ctaHref: '/about'
+    badge: 'LANGUAGE PACK ARCHITECTURE',
+    ctaText: 'View Global Language Circles',
+    ctaHref: '/community/language-circles'
   },
   {
     id: 'slide-4',
-    // Slide 4: Clean pure image slide with NO text and NO buttons
     imageDesktop: '/hero/slide-4.jpg',
     imageMobile: '/hero/slide-4.jpg',
     alt: 'Diplomatic Multilateral Language Training'

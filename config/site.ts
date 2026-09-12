@@ -2,10 +2,11 @@ export const SITE_CONFIG = {
   name: 'Ministry of External Affairs | ICCR Indian Language Learning Portal',
   shortName: 'MEA Language Portal',
   description: 'Official Government of India Sovereign Multilingual Learning & Speech Evaluation Portal under ICCR and MeitY Sambhasini.',
-  url: 'https://www.mea.gov.in',
+  url: 'https://mea-alpha.vercel.app',
   ogImage: '/images/PM-Narendra-Modi.webp',
   author: 'Ministry of External Affairs, Government of India',
   links: {
+    prototype: 'https://mea-alpha.vercel.app',
     mea: 'https://www.mea.gov.in',
     iccr: 'https://www.iccr.gov.in',
     Sambhasini: 'https://Sambhasini.gov.in',

@@ -78,10 +78,14 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { href: '/', label: 'Home ' },
-    { href: '/about', label: 'About MEA ' },
-    { href: '/resources', label: 'Resources ' },
-    { href: '/compliance', label: 'Compliance ' },
+    { href: '/', label: 'Home' },
+    { href: '/dashboard/student', label: 'My Journey' },
+    { href: '/resources', label: 'Resource Hub' },
+    { href: '/community/language-circles', label: 'Language Circles' },
+    { href: '/showcase', label: 'Creative Showcase' },
+    { href: '/global-impact', label: 'Global Impact' },
+    { href: '/dashboard/mission', label: 'Mission Outreach' },
+    { href: '/about', label: 'About MEA' },
   ];
 
   return (

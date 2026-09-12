@@ -27,7 +27,7 @@ export default function CurriculumTracks() {
               }`}
             aria-pressed={activeTrack === 'trackA'}
           >
-            Track A: Foreign Envoys ➔ Indian Languages
+            Track A: Global Learner ➔ Indian Languages (Phase 1)
           </button>
           <button
             onClick={() => setActiveTrack('trackB')}
@@ -37,7 +37,7 @@ export default function CurriculumTracks() {
               }`}
             aria-pressed={activeTrack === 'trackB'}
           >
-            Track B: Indian Scholars ➔ World Languages
+            Track B: Indian ➔ Foreign Languages (Future Expansion)
           </button>
         </div>
       </div>
